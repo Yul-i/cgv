@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CGV</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/cgv.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/cgv.js"></script>
+</head>
+<body>
+    <!-- #top=banner -->
+    <aside id="top-banner">
+        <div class="center">
+            <a href="#"><img src="img/top_banner.jpg" alt="쥬만지 새로운세계"></a>
+            <button>
+                <i class="fas fa-times"></i>
+                <span class="blind">닫기</span>
+            </button>
+        </div>
+    </aside>
+    <!-- /#top-banner -->
+
+    <!-- header -->
+    <header>
+        <div class="center">
+            <div class="sign">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+            <div class="gnb">
+                <h1><a href="#"><img src="img/cgv.png" alt="cgv"></a></h1>
+                <h2><img src="img/cultureplex.png" alt="cultureplex"></h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">예매</a></li>
+                        <li><a href="#">극장</a></li>
+                        <li><a href="#">이벤트&컬쳐</a></li>
+                    </ul>                
+                </nav>
+            </div>
+            <form action="#">
+                <label for="search" class="blind">영화검색</label>
+                <input type="text" id="search" placeholder="영화제목을 검색하세요.">
+                <button type="submit">검색</button>
+            </form>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <!-- section -->
+    <section>
+        <h2 class="blind">컨텐츠</h2>
+        <article class="main-slide">
+            <h3 class="blind">메인광고</h3>
+            <div class="center">
+                <!-- <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#"><img src="img/slide1.jpg" alt="let's play at cgv"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="img/slide2.jpg" alt="1월 이달의 cgv"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="img/slide3.jpg" alt="2018 cgv calendar"></a></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <ul class="slide-image">
+                        <li><a href="#"><img src="img/slide1.jpg" alt="let's play at cgv"></a></li>
+                        <li><a href="#"><img src="img/slide2.jpg" alt="1월 이달의 cgv"></a></li>
+                        <li><a href="#"><img src="img/slide3.jpg" alt="2018 cgv calendar"></a></li>
+                    </ul>
+                    <div class="pagination">
+                        <a href="#" class="on"><span class="blind">1</span></a>
+                        <a href="#"><span class="blind">2</span></a>
+                        <a href="#"><span class="blind">3</span></a>
+                    </div>
+                    <button class="prev">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="blind">이전</span>
+                    </button>
+                    <button class="next">
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="blind">다음</span>
+                    </button>
+                </div> -->
+                
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><a href="#"><img src="img/slide1.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="img/slide2.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="img/slide3.jpg" alt=""></a></div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="blind">이전</span>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="blind">다음</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="movie_selection center">
+            <h3><img src="img/h3_movie_selection.gif" alt="movie_selection"></h3>
+            <iframe width="730" height="388" src="https://www.youtube.com/embed/PVP5ZJuI57c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="#"><img src="img/coco.jpg" alt="코코 1월 11일 대개봉"></a>
+        </article>
+        <article class="event center">
+            <h3><img src="img/h3_event.gif" alt="event"></h3>
+            <ul>
+                <li><a href="#"><img src="img/banner1.jpg" alt="1월 이달의 cgv"></a></li>
+                <li><a href="#"><img src="img/banner2.jpg" alt="1318클럽 감동 어드벤처"></a></li>
+                <li><a href="#"><img src="img/banner3.jpg" alt="new year기획상품 출시"></a></li>
+                <li><a href="#"><img src="img/banner4.jpg" alt="나를 바꾸는 글쓰기"></a></li>
+            </ul>
+        </article>
+    </section>
+    <!-- /section -->
+    <!-- footer -->
+    <footer>
+        <div class="center">
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">IR</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">광고문의</a></li>
+                <li><a href="#">이용약관</a></li>
+            </ul>
+            <div class="info">
+                <h2><span class="blind">cgv</span></h2>
+                <address>
+                  (04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)<br>
+                  대표이사 : 최병환사업자등록번호 : 104-61-45690통신판매업신고번호 : 2017-서울용산-0662<br>
+                  개인정보보호 책임자 : 정종민대표이메일 : cjcgvmaster@cj.netCGV고객센터 : 1544-1122<br>
+                </address>
+                <small>&copy; CJ CGV. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+</body>
+</html>

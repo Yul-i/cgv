@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CGV</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+
+    /* reset */
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    a{text-decoration: none;}
+    img{vertical-align: top; border: 0;}
+    button{background: none; border: 0; cursor: pointer;}
+    .blind{font-size: 0; position: absolute; left:-9999px;}
+    .center{position: relative; width: 980px; margin: 0 auto;}
+    .li_line>li:not(:last-of-type){background: url(img/bg_v_line.gif) repeat-y right;}
+    .li_line>li{float: left; padding: 0 10px;}
+    .li_line a, footer small{color: gray;}
+
+    /* top-notice */
+    #top_notice{
+        background: black;     
+    }       
+    #top_notice button{
+        position: absolute;
+        top: 10px; right: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+
+    /* header */
+    header{
+        background-image: url(img/bg_header.gif); 
+        background-repeat: repeat-x;
+        }
+    .center_title{
+        height: 150px;
+        padding-bottom: 30px;
+    }
+    .center_title .title_center{
+        position: absolute;
+        top: 44%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .center_title .main_logo_left{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav ul{
+        position: absolute;
+        top: 52%; left: 50%;
+        transform: translateX(-50%);
+    }
+    nav ul li{
+        float: left;
+        padding: 0 20px;
+    }
+    nav ul li a{
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #login ul{
+        position: absolute;
+        top: 2%; right: 0;
+        }
+    #login ul li a{font-size: 14px;}
+
+    #search{
+        position: absolute;
+        bottom: 2%; left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #search>*{
+        display: inline-block;
+        height: 24px;
+        box-sizing: border-box;
+        vertical-align: middle;
+    }
+    #search input{
+        padding-right: 2px;
+        width: 290px;
+        text-indent: 10px;
+        border: 1px solid #000;
+    }
+    #search button{
+        padding: 2px 20px;
+        border: none;
+        background: #e71a0f;
+        color: white;
+    }
+
+    /* slide */
+
+    section{
+        content: '';
+        padding-bottom: 30px;
+    }
+
+    #main_slide{
+        overflow: hidden;
+        height: 450px;
+        background-image: url(img/bg_c_bricks.png);
+        background-repeat: repeat-x;
+    }
+
+    .main_slide{
+        height: 100%;
+    }
+
+    .slide_btn>*{
+        position: absolute;
+        top: 50%; 
+        transform: translateX(-50%);
+    }
+
+    .slide_btn .slide_btn_left{left: 5%;}
+    .slide_btn .slide_btn_right{right: 5%;}
+    .slide_btn button{color:rgba(255, 255, 255, 0); font-size: 30px;}
+
+    .main_slide:hover .slide_btn button{
+        color:rgba(255, 255, 255, 0.3);
+        transition: 0.7s;
+    }
+    .main_slide .slide_btn button:hover{
+        color: #fff;
+    }
+
+    .pagenation{
+        position: absolute;
+        overflow: hidden;
+        bottom: 5%; left: 50%;
+        transform: translateX(-50%);
+
+    }
+    .pagenation li{
+        float: left;
+        margin: 0 5px;
+    }
+    .pagenation span{
+        display: inline-block;
+        width: 16px; height: 16px;
+        border-radius: 50%;
+        background: gray;
+    }
+
+    /* sub title */
+
+    .sub_title{
+        height: 81px;
+        padding: 20px;
+        box-sizing: border-box;
+        background: url(img/bg_h3_line.jpg) repeat-x center;
+        text-align: center;
+    }
+    .sub_title img{
+      padding: 0 10px;
+      background: white;
+    }
+
+    /* movie selection */
+
+    .movie_contents{overflow: hidden;}
+    .movie_video1{float: left;}
+    .movie_video2 {float: right;}
+
+    /* event */
+
+    #event{overflow: hidden; clear: both;}
+    #event_img li{float: left;}
+    #event_img li:nth-child(1),#event_img li:nth-child(2),#event_img li:nth-child(3){
+        padding-right: 6.5px;
+    }
+
+    /* footer */
+
+    footer{
+        box-sizing: border-box;
+        height: 280px;
+        padding-top: 30px;
+        border-top: 1px solid gray;
+        background: url(img/bg_footer_com.gif);
+    }
+    #footer_list{
+        overflow: hidden;
+    }
+
+    #office_info{
+        overflow: hidden;
+        padding: 10px 0;
+    }
+    .cgv_sp{
+    display: inline-block;
+    width: 110px; height: 60px;
+    background: url(img/sprite.png) no-repeat;
+    }
+    .sp-footer_logo{background-position: -134px -302px;}
+    
+    #office_info span{
+        float: left;
+    }
+    #office_info .footer_info{
+        float: left;
+    }
+    #office_info .footer_info p{
+        font-size: 14px;
+    }
+    footer small{
+        display: inline-block;
+        float: right;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="top_notice">
+        <div class="center">
+            <img src="img/top_banner.jpg" alt="">
+            <button class="fas fa-times">
+                <span class="blind">닫기</span>
+            </button>
+        </div>
+    </div>
+    <header>
+        <div class="center center_title">
+            <div id="main_logo">
+                <h1 class="title_center">
+                    <img src="img/cultureplex.png" alt="">
+                </h1>
+                <h2 class="main_logo_left">
+                    <img src="img/cgv.png" alt="">
+                </h2>
+            </div>
+            <div id="login">
+                <ul class="li_line">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">예매</a></li>
+                    <li><a href="#">극장</a></li>
+                    <li><a href="#">이벤트&컬처</a></li>
+                </ul>
+            </nav>
+            <form id="search">
+                <input type="text" placeholder="영화제목을 검색하세요.">
+                <button type="submit">검색</button>
+            </form>
+        </div>
+    </header>
+    <section>
+        <article id="main_slide">
+            <div class="center main_slide">
+                <div class="slide1">
+                <img src="img/slide1.jpg" alt="">
+                </div>
+                <div class="slide2">
+                    <img src="img/slide2.jpg" alt="">
+                </div>
+                <div class="slide3">
+                    <img src="img/slide3.jpg" alt="">
+                </div>
+                <div class="slide_btn">
+                    <div class="slide_btn_left">
+                        <button type="button" class="fas fa-chevron-left"></button>
+                    </div>
+                    <div class="slide_btn_right">
+                        <button type="button" class="fas fa-chevron-right"></button>
+                    </div>
+                </div>
+                <div class="pagenation">
+                    <ul>
+                        <li><a href="#"><span style="background: white;"></span></a></li>
+                        <li><a href="#"><span></span></a></li>
+                        <li><a href="#"><span></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <div class="center">
+            <article id="movie">
+                <h3 class="sub_title">
+                    <img src="img/h3_movie_selection.gif" alt="">
+                </div>
+                <div class="center movie_contents">
+                    <div class="movie_video1">
+                    <iframe width="730" height="388" src="https://www.youtube.com/embed/PVP5ZJuI57c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="movie_video2">
+                        <img src="img/coco.jpg" alt="">
+                    </div>
+                </h3>
+            </article>
+
+            <article id="event">
+                <h3 class="sub_title">
+                    <img src="img/h3_event.gif" alt="">
+                </h3>
+                <div id="event_img">
+                    <ul>
+                        <li><a href="#"><img src="img/banner1.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="img/banner2.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="img/banner3.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="img/banner4.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            <div id="footer_list">
+                <ul class="li_line">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">IR</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">광고문의</a></li>
+                    <li><a href="#">이용약관</a></li>
+                </ul>
+            </div>
+            <div id="office_info">
+                <span class="cgv_sp sp-footer_logo"></span>
+                <div class="footer_info">
+                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                    <p>대표이사 : 최병환사업자등록번호 : 104-61-45690통신판매업신고번호 : 2017-서울용산-0662</p>
+                    <p>개인정보보호 책임자 : 정종민대표이메일 : cjcgvmaster@cj.netCGV고객센터 : 1544-1122</p>
+                </div>
+            </div>
+            <small>&copy; CJ CGV. All Rights Reserved.</small>
+        </div>
+    </footer>
+</body>
+</html>

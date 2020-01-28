@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* reset, common====================================================== */
+*{margin: 0; padding: 0;}
+body{font-family: Arial, Helvetica, sans-serif; background: #fdfcf0;}
+li{list-style: none;}
+a{color: #000; text-decoration: none;}
+button{background: none; border: none; cursor:pointer;}
+.blind{position: absolute; left: -9999px; font-size: 0;}
+.center{position: relative; width: 980px; margin: auto;}
+
+/* top-banner ======================================================== */
+#top-banner{background: #000000;}
+#top-banner img{display: block;}
+#top-banner button{
+    position: absolute;
+    right: 0; top: 5px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/* header============================================================= */
+header{
+    background: url(../img/bg_header.gif) repeat-x;
+}
+header .sign{
+    position: absolute;
+    right: 0; top: 5px;
+}
+header .sign a{font-size: 12px;}
+header .sign a:nth-child(1){
+    background: url(../img/bg_v_line.gif) no-repeat right center;
+    padding-right: 5px;
+    margin-right: 4px;
+}
+
+header .gnb{position: relative; height: 149px; text-align: center;}
+header .gnb h1{position: absolute; top: 60px;}
+header .gnb h2{padding-top:58px;}
+header .gnb nav{margin-top: -2px;}
+header .gnb nav ul{display: inline-block;}/* 부모를 인라인 블록 처리를 하면 text-align:center가 가능함*/
+header .gnb nav ul li{float: left; margin: 0 30px;}
+header .gnb nav ul li a{font-size: 18px; font-weight: bold;}
+
+header form{
+    /* display: inline-block; */
+    width: 350px;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    /* 
+    가운데 위치 잡게 하는 방법
+
+    1.display:inline-block;주고 header에 text-align : center; 주기
+    2.position:absolute로 옮기기
+    3.margin-auto 주기
+    */
+}
+header form input{
+    float: left;/*float는 반응형이여도 크기 안바뀌면 쓰면 될듯함..maybe */
+    width: 300px; height: 30px;
+    padding: 0 10px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+}
+header form button{
+    /* 반응형 할때 position:absolute / right:0, top:0; 잡는게 좋음*/
+    width: 50px; height: 30px;
+    background: red; color: #fff;
+    font-weight: bold;
+}
+
+/* section ========================================================= */
+/* main-slide */
+.main-slide{
+    background: url(../img/bg_c_bricks.png) repeat-x;
+}
+.main-slide .slide{
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+}
+/* .main-slide .slide .slide-image{}
+.main-slide .slide .slide-image li{position: absolute; display: none;}
+.main-slide .slide .slide-image li.on{display: block;}
+.main-slide .slide .slide-image li img{display: block;}여백 없애기? */
+
+.swiper-container-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-custom, .swiper-pagination-fraction{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    float: left;
+    width: 15px; height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #cacaca;
+    box-sizing: border-box;
+}
+.swiper-pagination-bullet-active{
+    border: 3px solid red;
+    background: none;
+
+}
+
+.main-slide .slide button{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    color: #fff;
+    font-size: 3em;
+    transition: 0.5s;
+}
+.main-slide .slide button.prev{left: -30px;}
+.main-slide .slide button.next{right: -30px;}
+.main-slide .slide:hover button.prev{left: 20px; opacity:1;}
+.main-slide .slide:hover button.next{right: 20px; opacity: 1;}
+
+/* movie-selection & event */
+
+article h3{
+    background: url(../img/bg_h3_line.jpg) repeat-x center;
+    text-align: center;
+}
+article h3 img{
+    padding: 30px 20px;
+    background: #fdfcf0;
+    vertical-align: top;
+}
+
+.movie-selection{overflow: hidden;}
+.movie-selection iframe{float: left;}
+.movie-selection a{float: right;}
+
+.event ul{overflow: hidden;}
+.event ul li{float: left; margin-right: 6.66px;}
+.event ul li:last-child{margin: 0;}
+
+/* footer============================================================== */
+footer{
+    height: 250px;
+    margin-top: 50px;
+    border-top: 1px solid #949494;
+    background: url(../img/bg_footer_com.gif) repeat-x bottom;
+}
+footer ul{overflow: hidden; margin: 20px 0;}
+footer ul li{
+    float: left; 
+    padding-right: 10px;
+    margin-right: 9px;
+    background: url(../img/bg_v_line.gif) no-repeat right center;
+}
+footer ul li:last-child{background: none;}
+footer ul li a{color: #444; font-size: 14px;}
+
+footer .info{position: relative;}
+footer .info h2{
+    position: absolute;
+    width: 100px; height: 50px;
+    background: url(../img/sprite.png) no-repeat -141px -317px;
+}
+footer .info address{
+    margin-left: 110px;
+    font-size: 12px;
+    font-style: normal;
+}
+footer .info small{
+    position: absolute;
+    right: 0; bottom: 0;
+}
+
+
+/* 슬라이드 */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+/* .swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+} */
+
+/* .swiper-button-prev, .swiper-button-next{
+    color: #fff;
+    font-size: 3em;
+    transition: 0.5s;
+} */
+.swiper-button-prev::after, .swiper-button-next::after{
+    display: none;
+}
+/* .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    width: 15px; height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #cacaca;
+    box-sizing: border-box;
+} */
+
+/* .swiper-pagination-bullet-active{
+    border: 3px solid red;
+    background: none;
+} */
